@@ -22,28 +22,33 @@ function getComputerChoice(min = 1, max = 3) {
 console.log(getComputerChoice());
 
 function getHumanChoice() {
-  const humanChoice = parseInt(
+  let humanChoice = parseInt(
     prompt(
-      "Choose a number between 1 to 3, 1 stands for Rock, 2 for Paper, 3 for Scissors",
+      "Choose a number between 1 to 3, 1 stands for Rock, 2 for Paper, 3 for Scissors. Note an ivalid numebr won't run!",
     ),
   );
 
   let isValid = false;
 
   while (!isValid) {
-    if (humanChoice === NaN) {
+    let humanChoice = parseInt(
+      prompt(
+        "Choose a number between 1 to 3, 1 stands for Rock, 2 for Paper, 3 for Scissors. Note an invalid number won't run!",
+      ),
+    );
+
+    if (isNaN(humanChoice)) {
       alert("You cancelled the prompt.");
       break;
     }
 
     if (humanChoice != 1 && humanChoice != 2 && humanChoice != 3) {
-      alert("Error: You chose an Invalid Value. Please try again.");
       humanChoice;
     } else if (humanChoice === "") {
-      alert("Error: Input cannot be empty. Please try again.");
       humanChoice;
     } else {
-      isValid = true; // Valid input received
+      // Valid input received
+      break;
     }
 
     if (isValid) {
@@ -51,11 +56,11 @@ function getHumanChoice() {
     }
   }
 
-  if (humanChoice === 1) {
+  if (humanChoice === 1 && errorMessageHumanChoice === 1) {
     return Rock;
-  } else if (humanChoice === 2) {
+  } else if (humanChoice === 2 && errorMessageHumanChoice === 2) {
     return Paper;
-  } else if (humanChoice === 3) {
+  } else if (humanChoice === 3 && errorMessageHumanChoice === 3) {
     return Scissors;
   } else {
     return "You have entered a wrong number your function might not evaluate right";
