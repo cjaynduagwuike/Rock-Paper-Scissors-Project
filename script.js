@@ -22,16 +22,12 @@ function getComputerChoice(min = 1, max = 3) {
 console.log(getComputerChoice());
 
 function getHumanChoice() {
-  let humanChoice = parseInt(
-    prompt(
-      "Choose a number between 1 to 3, 1 stands for Rock, 2 for Paper, 3 for Scissors. Note an ivalid numebr won't run!",
-    ),
-  );
+  let humanChoice;
 
   let isValid = false;
 
   while (!isValid) {
-    let humanChoice = parseInt(
+    humanChoice = parseInt(
       prompt(
         "Choose a number between 1 to 3, 1 stands for Rock, 2 for Paper, 3 for Scissors. Note an invalid number won't run!",
       ),
@@ -56,11 +52,11 @@ function getHumanChoice() {
     }
   }
 
-  if (humanChoice === 1 && errorMessageHumanChoice === 1) {
+  if (humanChoice === 1) {
     return Rock;
-  } else if (humanChoice === 2 && errorMessageHumanChoice === 2) {
+  } else if (humanChoice === 2) {
     return Paper;
-  } else if (humanChoice === 3 && errorMessageHumanChoice === 3) {
+  } else if (humanChoice === 3) {
     return Scissors;
   } else {
     return "You have entered a wrong number your function might not evaluate right";
