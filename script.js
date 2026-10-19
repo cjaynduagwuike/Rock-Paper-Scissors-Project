@@ -58,7 +58,7 @@ function getHumanChoice() {
   } else if (humanChoice === 3) {
     return Scissors;
   } else {
-    return "You have entered a wrong number your function might not evaluate right";
+    return "Hmm Something went wrong.";
   }
 }
 console.log(getHumanChoice());
