@@ -39,8 +39,7 @@ function getHumanChoice() {
     }
 
     if (humanChoice != 1 && humanChoice != 2 && humanChoice != 3) {
-      humanChoice;
-    } else if (humanChoice === "") {
+      alert("Are you sure you chose a number between 1 and 3?");
       humanChoice;
     } else {
       // Valid input received
