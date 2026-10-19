@@ -7,12 +7,16 @@ function getComputerChoice(min = 1, max = 3) {
     Math.random() * (maxFloored - minCeiled + 1) + minCeiled,
   );
 
+  const Rock = "Rock";
+  const Paper = "Paper";
+  const Scissors = "Scissors";
+
   if (randomInt === 1) {
-    return "Rock";
+    return Rock;
   } else if (randomInt === 2) {
-    return "Paper";
+    return Paper;
   } else {
-    return "Scissors";
+    return Scissors;
   }
 }
 console.log(getComputerChoice());
