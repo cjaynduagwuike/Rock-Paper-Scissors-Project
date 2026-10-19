@@ -43,11 +43,8 @@ function getHumanChoice() {
       humanChoice;
     } else {
       // Valid input received
-      break;
-    }
-
-    if (isValid) {
       alert(`Success! You entered: ${humanChoice}`);
+      break;
     }
   }
 
