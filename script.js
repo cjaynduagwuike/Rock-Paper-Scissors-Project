@@ -106,12 +106,19 @@ const computerSelection = getComputerChoice();
 function playGame() {
   let gamesPlayed = 0;
 
+  // While loop defines the number of games to be played
   while (gamesPlayed < 5) {
+    // Keeps count of the number of games played
     gamesPlayed = gamesPlayed + 1;
 
+    // Heading
     console.log(`Time to play Round ${gamesPlayed}`);
+
+    // Gets the getHumanChoice() and getComputerChoice() functions
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
+
+    // Logs the Computer and User choices to the console in the current round
     console.log(
       `In this round (Round ${gamesPlayed}) Computer chose: ${computerSelection}`,
     );
