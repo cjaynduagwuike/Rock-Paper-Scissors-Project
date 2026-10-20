@@ -149,6 +149,8 @@ function playGame() {
     console.log(`Unfortunately you've lost!`);
   } else if (!isNaN(humanSelection)) {
     console.log("It's a tie!!");
+  } else {
+    console.log("Oh? appears you....cancelled?");
   }
 }
 playGame();
