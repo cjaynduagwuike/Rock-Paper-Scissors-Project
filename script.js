@@ -133,5 +133,19 @@ function playGame() {
     console.log(`Your current Score: ${humanScore}`);
     console.log(`Current Computer Score: ${computerScore}`);
   }
+  // The if block here decides the winner of the game
+  if ((gamesPlayed = 4 && humanScore > computerScore)) {
+    console.log(
+      `The final scores are: Your Score: ${humanScore} | Computer's Score: ${computerScore}`,
+    );
+    console.log(`Congratulations!!! You won!!`);
+  } else if ((gamesPlayed = 4 && computerScore > humanScore)) {
+    console.log(
+      `The final scores are: Your Score: ${humanScore} | Computer's Score: ${computerScore}`,
+    );
+    console.log(`Unfortunately you've lost!`);
+  } else {
+    console.log("It's a tie!!");
+  }
 }
 playGame();
