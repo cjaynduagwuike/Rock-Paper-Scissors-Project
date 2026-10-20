@@ -104,7 +104,7 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 function playGame() {
-  let gamesPlayed = 0;
+  let gamesPlayed = 1;
 
   while (gamesPlayed <= 5) {
     gamesPlayed = gamesPlayed + 1;
