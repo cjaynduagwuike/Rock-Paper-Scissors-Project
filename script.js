@@ -131,12 +131,12 @@ function playGame() {
     console.log(`Current Computer Score: ${computerScore}`);
   }
   // The if block here decides the winner of the game
-  if ((gamesPlayed = 4 && humanScore > computerScore)) {
+  if (humanScore > computerScore) {
     console.log(
       `The final scores are: Your Score: ${humanScore} | Computer's Score: ${computerScore}`,
     );
     console.log(`Congratulations!!! You won!!`);
-  } else if ((gamesPlayed = 4 && computerScore > humanScore)) {
+  } else if (computerScore > humanScore) {
     console.log(
       `The final scores are: Your Score: ${humanScore} | Computer's Score: ${computerScore}`,
     );
