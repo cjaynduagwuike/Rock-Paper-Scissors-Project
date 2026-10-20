@@ -116,11 +116,6 @@ function playGame() {
     humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
 
-    // Sets condition if the user clicks cancel in the prompt
-    if (isNaN(humanSelection)) {
-      break;
-    }
-
     // Logs the Computer and User choices to the console in the current round
     console.log(
       `In this round (Round ${gamesPlayed}) Computer chose: ${computerSelection}`,
@@ -147,7 +142,7 @@ function playGame() {
       `The final scores are: Your Score: ${humanScore} | Computer's Score: ${computerScore}`,
     );
     console.log(`Unfortunately you've lost!`);
-  } else if (humanSelection === computerSelection) {
+  } else if (humanScore === computerScore) {
     console.log("It's a tie!!");
   } else if (humanSelection === "Hmm Something went wrong") {
     console.log("Oh? appears you....cancelled?");
