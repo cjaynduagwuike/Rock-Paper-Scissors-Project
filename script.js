@@ -113,9 +113,9 @@ console.log(`Updated Computer Score: ${computerScore}`);
 
 function playGame() {
   let gamesPlayed = 0;
-  let startplayRound = playRound;
 
   while (gamesPlayed <= 5) {
+    roundResults;
     gamesPlayed = gamesPlayed + 1;
   }
 }
