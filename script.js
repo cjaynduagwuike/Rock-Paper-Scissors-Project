@@ -78,7 +78,6 @@ function playRound(humanChoice, computerChoice) {
   // This if block is run if the computer's choice beats the user's
   if (computerChoice === Rock && computerChoice === Scissors) {
     computerScore = computerScore + 1;
-
     console.log("You lost! The computer chose Rock while you chose Scissors.");
   } else if (computerChoice === Paper && humanChoice === Rock) {
     computerScore = computerScore + 1;
