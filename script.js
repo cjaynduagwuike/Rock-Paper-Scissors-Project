@@ -44,7 +44,7 @@ function getHumanChoice() {
     } else {
       // Valid input received
       alert(`Success! You entered: ${humanChoice}`);
-      isValid = True;
+      isValid = true;
     }
   }
 
