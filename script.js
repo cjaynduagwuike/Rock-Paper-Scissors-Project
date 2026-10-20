@@ -147,9 +147,9 @@ function playGame() {
       `The final scores are: Your Score: ${humanScore} | Computer's Score: ${computerScore}`,
     );
     console.log(`Unfortunately you've lost!`);
-  } else if (!isNaN(humanSelection)) {
+  } else if (humanSelection === computerSelection) {
     console.log("It's a tie!!");
-  } else {
+  } else if (humanSelection === "Hmm Something went wrong") {
     console.log("Oh? appears you....cancelled?");
   }
 }
