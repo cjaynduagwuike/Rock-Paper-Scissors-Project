@@ -85,6 +85,17 @@ function playRound(humanChoice, computerChoice) {
   } else {
     return;
   }
+
+  // This block is run if the user's choice is the same as the computer's
+  if (computerChoice === Rock && humanChoice === Rock) {
+    console.log("It's a tie! You and the computer both chose Rock!");
+  } else if (computerChoice === Paper && humanChoice === Paper) {
+    console.log("It's a tie! You and the computer both chose Paper!");
+  } else if (computerChoice === Scissors && humanChoice === Scissors) {
+    console.log("It's a tie! You and the computer both chose Scissors!");
+  } else {
+    return;
+  }
 }
 
 const humanSelection = getHumanChoice();
