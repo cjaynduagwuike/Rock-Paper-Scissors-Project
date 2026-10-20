@@ -102,21 +102,29 @@ function playRound(humanChoice, computerChoice) {
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
-const roundResults = playRound(humanSelection, computerSelection);
-
-console.log(`Computer chose: ${computerSelection}`);
-console.log(`You chose: ${humanSelection}`);
-
-// Log the scores
-console.log(`Updated Human Score: ${humanScore}`);
-console.log(`Updated Computer Score: ${computerScore}`);
 
 function playGame() {
   let gamesPlayed = 0;
 
   while (gamesPlayed <= 5) {
-    roundResults;
     gamesPlayed = gamesPlayed + 1;
+
+    console.log(`Time to play Round ${gamesPlayed}`);
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    console.log(
+      `In this round (Round ${gamesPlayed}) Computer chose: ${computerSelection}`,
+    );
+    console.log(
+      `In this round (Round ${gamesPlayed}) You chose: ${humanSelection}`,
+    );
+
+    // Calls playRound() function and starts a round
+    const startplayRound = playRound(humanSelection, computerSelection);
+
+    // Logs the value of humanScore and computerScore to the console
+    console.log(`Your current Score: ${humanScore}`);
+    console.log(`Current Computer Score: ${computerScore}`);
   }
 }
 playGame();
