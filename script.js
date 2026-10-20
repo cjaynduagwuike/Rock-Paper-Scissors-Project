@@ -102,13 +102,21 @@ function playRound(humanChoice, computerChoice) {
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+const roundResults = playRound(humanSelection, computerSelection);
 
 console.log(`Computer chose: ${computerSelection}`);
 console.log(`You chose: ${humanSelection}`);
 
-// Plays the round
-playRound(humanSelection, computerSelection);
-
 // Log the scores
 console.log(`Updated Human Score: ${humanScore}`);
 console.log(`Updated Computer Score: ${computerScore}`);
+
+function playGame() {
+  let gamesPlayed = 0;
+  let startplayRound = playRound;
+
+  while (gamesPlayed <= 5) {
+    gamesPlayed = gamesPlayed + 1;
+  }
+}
+playGame();
