@@ -19,7 +19,6 @@ function getComputerChoice(min = 1, max = 3) {
     return Scissors;
   }
 }
-console.log(getComputerChoice());
 
 function getHumanChoice() {
   let humanChoice;
@@ -58,7 +57,6 @@ function getHumanChoice() {
     return "Hmm Something went wrong.";
   }
 }
-console.log(getHumanChoice());
 
 let humanScore = 0;
 let computerScore = 0;
@@ -72,7 +70,6 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice === Scissors && computerChoice === Paper) {
     console.log("You win! You chose Scissors while the computer chose Paper.");
   } else {
-    return;
   }
 
   // This if block is run if the computer's choice beats the user's
@@ -83,7 +80,6 @@ function playRound(humanChoice, computerChoice) {
   } else if (computerChoice === Scissors && humanChoice === Paper) {
     console.log("You lost! The computer chose Scissors while you chose Paper.");
   } else {
-    return;
   }
 
   // This block is run if the user's choice is the same as the computer's
@@ -94,11 +90,12 @@ function playRound(humanChoice, computerChoice) {
   } else if (computerChoice === Scissors && humanChoice === Scissors) {
     console.log("It's a tie! You and the computer both chose Scissors!");
   } else {
-    return;
   }
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+console.log(computerSelection);
+console.log(humanSelection);
 
-playRound(humanSelection, computerSelection);
+console.log(playRound(humanSelection, computerSelection));
