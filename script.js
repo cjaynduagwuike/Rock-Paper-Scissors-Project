@@ -64,26 +64,29 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
   // This if block is run if the users choice beats the computer's
   if (humanChoice === Rock && computerChoice === Scissors) {
-    humanScore++;
+    humanScore = humanScore + 1;
+
     console.log("You win! You chose Rock while the computer chose Scissors.");
   } else if (humanChoice === Paper && computerChoice === Rock) {
-    humanScore++;
+    humanScore = humanScore + 1;
     console.log("You win! You chose Paper while the computer chose Rock.");
   } else if (humanChoice === Scissors && computerChoice === Paper) {
-    humanScore++;
+    humanScore = humanScore + 1;
     console.log("You win! You chose Scissors while the computer chose Paper.");
   } else {
   }
 
   // This if block is run if the computer's choice beats the user's
   if (computerChoice === Rock && computerChoice === Scissors) {
-    computerScore++;
+    computerScore = computerScore + 1;
+
     console.log("You lost! The computer chose Rock while you chose Scissors.");
   } else if (computerChoice === Paper && humanChoice === Rock) {
-    computerScore++;
+    computerScore = computerScore + 1;
+
     console.log("You lost! The computer chose Paper while you chose Rock.");
   } else if (computerChoice === Scissors && humanChoice === Paper) {
-    computerScore++;
+    computerScore = computerScore + 1;
     console.log("You lost! The computer chose Scissors while you chose Paper.");
   } else {
   }
@@ -103,5 +106,7 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 console.log(computerSelection);
 console.log(humanSelection);
+console.log(humanScore);
+console.log(computerScore);
 
 console.log(playRound(humanSelection, computerSelection));
