@@ -40,11 +40,11 @@ function getHumanChoice() {
 
     if (humanChoice != 1 && humanChoice != 2 && humanChoice != 3) {
       alert("Are you sure you chose a number between 1 and 3?");
-      humanChoice;
+      continue;
     } else {
       // Valid input received
       alert(`Success! You entered: ${humanChoice}`);
-      break;
+      isValid = True;
     }
   }
 
