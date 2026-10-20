@@ -129,6 +129,11 @@ function playGame() {
     // Logs the value of humanScore and computerScore to the console
     console.log(`Your current Score: ${humanScore}`);
     console.log(`Current Computer Score: ${computerScore}`);
+
+    // Sets condition if the user clicks cancel in the prompt
+    if (isNaN(humanSelection)) {
+      break;
+    }
   }
   // The if block here decides the winner of the game
   if (humanScore > computerScore) {
