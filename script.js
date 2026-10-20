@@ -34,7 +34,7 @@ function getHumanChoice() {
 
     if (isNaN(humanChoice)) {
       alert("You cancelled the prompt.");
-      break;
+      return null;
     }
 
     if (humanChoice != 1 && humanChoice != 2 && humanChoice != 3) {
@@ -114,6 +114,10 @@ function playGame() {
 
     // Gets the getHumanChoice() and getComputerChoice() functions
     humanSelection = getHumanChoice();
+    if (humanSelection === null) {
+      console.log("Game cancelled by user.");
+      return;
+    }
     let computerSelection = getComputerChoice();
 
     // Logs the Computer and User choices to the console in the current round
