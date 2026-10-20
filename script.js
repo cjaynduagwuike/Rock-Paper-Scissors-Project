@@ -104,9 +104,9 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 function playGame() {
-  let gamesPlayed = 1;
+  let gamesPlayed = 0;
 
-  while (gamesPlayed <= 5) {
+  while (gamesPlayed < 5) {
     gamesPlayed = gamesPlayed + 1;
 
     console.log(`Time to play Round ${gamesPlayed}`);
