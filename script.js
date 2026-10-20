@@ -113,7 +113,7 @@ function playGame() {
     console.log(`Time to play Round ${gamesPlayed}`);
 
     // Gets the getHumanChoice() and getComputerChoice() functions
-    let humanSelection = getHumanChoice();
+    humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
 
     // Sets condition if the user clicks cancel in the prompt
