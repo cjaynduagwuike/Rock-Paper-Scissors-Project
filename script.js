@@ -102,6 +102,7 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {
   let gamesPlayed = 0;
+  let humanSelection;
 
   // While loop defines the number of games to be played
   while (gamesPlayed < 5) {
@@ -112,8 +113,13 @@ function playGame() {
     console.log(`Time to play Round ${gamesPlayed}`);
 
     // Gets the getHumanChoice() and getComputerChoice() functions
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+
+    // Sets condition if the user clicks cancel in the prompt
+    if (isNaN(humanSelection)) {
+      break;
+    }
 
     // Logs the Computer and User choices to the console in the current round
     console.log(
@@ -129,11 +135,6 @@ function playGame() {
     // Logs the value of humanScore and computerScore to the console
     console.log(`Your current Score: ${humanScore}`);
     console.log(`Current Computer Score: ${computerScore}`);
-
-    // Sets condition if the user clicks cancel in the prompt
-    if (isNaN(humanSelection)) {
-      break;
-    }
   }
   // The if block here decides the winner of the game
   if (humanScore > computerScore) {
@@ -146,7 +147,7 @@ function playGame() {
       `The final scores are: Your Score: ${humanScore} | Computer's Score: ${computerScore}`,
     );
     console.log(`Unfortunately you've lost!`);
-  } else {
+  } else if (!isNaN(humanSelection)) {
     console.log("It's a tie!!");
   }
 }
