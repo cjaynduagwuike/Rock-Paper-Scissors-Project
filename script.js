@@ -58,6 +58,7 @@ function getHumanChoice() {
   }
 }
 
+// Initialize humanScore and computerScore variables allowing them to be modified and accessed by all functions.
 let humanScore = 0;
 let computerScore = 0;
 
@@ -98,9 +99,6 @@ function playRound(humanChoice, computerChoice) {
   } else {
   }
 }
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
 function playGame() {
   let gamesPlayed = 0;
